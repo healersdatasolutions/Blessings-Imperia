@@ -7,7 +7,6 @@ import toast from 'react-hot-toast';
 import { Check } from 'lucide-react';
 import ImageCarousel from '../components/ImageCarousel';
 
-
 declare global {
   interface Window {
     Razorpay: any;
@@ -66,20 +65,20 @@ export default function Checkout() {
     }
 
     fetchRoom();
+
+    // Load Razorpay script
+    loadScript('https://checkout.razorpay.com/v1/checkout.js').then((res) => {
+      if (!res) toast.error('Failed to load payment gateway. Please refresh or try again later.');
+    });
   }, [roomId, user, navigate]);
 
   const handlePayment = async () => {
     if (!room || processing) return;
-    
-    const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js');
-
-    if (!res) {
-      alert('Razorpay SDK failed to load. Are you online?');
+    if (!window.Razorpay) {
+      toast.error('Payment gateway is not available. Please try again later.');
       return;
     }
-    console.log('Payment processing...');
     
-
     setProcessing(true);
     try {
       // Create booking in Supabase
@@ -101,8 +100,8 @@ export default function Checkout() {
 
       // Initialize Razorpay payment
       const options = {
-        key: 'rzp_test_uGoq5ABJztRAhk', // Replace with your Razorpay key
-        amount: totalPrice * 100, // Amount in paise
+        key: 'rzp_live_VkMDyG6c8bY61E', // Securely fetched from the backend
+        amount: totalPrice * 100, // Amount is in paise
         currency: 'INR',
         name: 'Blessings Imperia',
         description: `Booking for ${room.name}`,
@@ -198,15 +197,15 @@ export default function Checkout() {
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-lg">
-        <h2 className="text-xl font-semibold mb-4">Payment Details</h2>
-        <button
-          onClick={handlePayment}
-          disabled={processing}
-          className="w-full bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors disabled:bg-gray-400"
-        >
-          {processing ? 'Processing...' : 'Pay Now'}
-        </button>
-      </div>
+            <h2 className="text-xl font-semibold mb-4">Payment Details</h2>
+            <button
+              onClick={handlePayment}
+              disabled={processing}
+              className="w-full bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors disabled:bg-gray-400"
+            >
+              {processing ? 'Processing...' : 'Pay Now'}
+            </button>
+          </div>
         </div>
 
         <div className="bg-gray-50 p-6 rounded-lg">
@@ -230,5 +229,3 @@ export default function Checkout() {
     </div>
   );
 }
-
-
