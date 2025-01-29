@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Wifi, Coffee, Car, ShieldCheck, CreditCard, Phone, Utensils, Briefcase, MapPin, ConciergeBell, Building2, Dumbbell, Bath, Flower, Restaurant, ShoppingBag, ParkingCircle, Train, Bus, FirstAidKit, Users, Hotel } from 'lucide-react';
+import { Wifi, Coffee, Car, ShieldCheck, CreditCard, Phone, Utensils, Briefcase, MapPin, ConciergeBell, Building2 } from 'lucide-react';
 
 const inHouseFacilities = [
   { icon: Wifi, name: 'Free Wi-Fi in all rooms & lobby' },
@@ -9,21 +9,13 @@ const inHouseFacilities = [
   { icon: Phone, name: 'Doctor, Florist, and Salon on Call' },
   { icon: Utensils, name: 'Multi-Cuisine Restaurant' },
   { icon: Briefcase, name: 'Conference & Banquet Halls' },
-  { icon: Dumbbell, name: 'Fully Equipped Gym' },
-  { icon: Bath, name: 'Outdoor Swimming Pool' },
-  { icon: Flower, name: 'Spa & Wellness Center' },
-  { icon: Hotel, name: 'Luxury Suites & Executive Rooms' }
+  { icon: Building2, name: 'Luxury Suites & Executive Rooms' }
 ];
 
 const outHouseFacilities = [
   { icon: Car, name: 'Valet Parking & Cab on Call' },
   { icon: ConciergeBell, name: 'Tour & Ticketing Assistance' },
-  { icon: Bus, name: '5 mins from Bus Stand' },
-  { icon: Train, name: '15 mins from Railway Station' },
-  { icon: ShoppingBag, name: 'Nearby Shopping & Attractions' },
-  { icon: FirstAidKit, name: 'Emergency Medical Assistance' },
-  { icon: Users, name: 'Nearby Business & Event Centers' },
-  { icon: ParkingCircle, name: 'Spacious Parking Area' }
+  { icon: MapPin, name: '5 min from Bus Stand, 15 min from Railway Station' }
 ];
 
 export default function AmenitiesSection() {
