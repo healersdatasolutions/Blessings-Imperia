@@ -3,13 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const images = [
-  "https://images.unsplash.com/photo-1736963808405-f60d284c4277?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1736963808466-02460743a6f3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1736963808381-5d7165a08e58?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-
- "https://images.unsplash.com/photo-1736963808382-723525d0ae04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1736963204265-53fb7776eaa0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1736963808402-bfbff0d03d1a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "/images/gallery1.jpg",
+  "/images/gallery2.jpg",
+  "/images/gallery3.jpg",
+  "/images/gallery4.jpg",
+  "/images/gallery5.jpg"
 ];
 
 export default function GallerySection() {
@@ -54,7 +52,7 @@ export default function GallerySection() {
               className="cursor-pointer"
               onClick={() => openLightbox(index)}
             >
-              <img src={src || "/placeholder.svg"} alt={`Gallery image ${index + 1}`} className="w-full h-64 object-cover rounded-lg" />
+              <img src={src} alt={`Gallery image ${index + 1}`} className="w-full h-64 object-cover rounded-lg" />
             </motion.div>
           ))}
         </div>
@@ -77,11 +75,10 @@ export default function GallerySection() {
             <button onClick={nextImage} className="absolute right-4 text-white">
               <ChevronRight size={24} />
             </button>
-            <img src={images[selectedImage] || "/placeholder.svg"} alt={`Gallery image ${selectedImage + 1}`} className="max-w-full max-h-full" />
+            <img src={images[selectedImage]} alt={`Gallery image ${selectedImage + 1}`} className="max-w-full max-h-full" />
           </motion.div>
         )}
       </AnimatePresence>
     </section>
   );
 }
-
