@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fix for Date Picker z-index issue */
+.react-datepicker-popper {
+  z-index: 1000 !important;
+}
