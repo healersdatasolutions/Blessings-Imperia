@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
+import "react-datepicker/dist/react-datepicker.css";
 import { useNavigate } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Bed, Tv, CreditCard, Palette } from 'lucide-react';
-import "react-datepicker/dist/react-datepicker.css";
 import HeroCarousel from '../components/HeroCarousel';
 import AmenitiesSection from '../components/AmenitiesSection';
 import GallerySection from '../components/GallerySection';
@@ -29,31 +29,31 @@ export default function Home() {
   }, []);
 
   const handleSearch = () => {
-    if (!checkIn || !checkOut) return;
-    
-    const searchParams = new URLSearchParams({
-      checkIn: checkIn.toISOString(),
-      checkOut: checkOut.toISOString(),
-      guests: guests.toString(),
-      rooms: rooms.toString()
-    });
-    
-    navigate(`/rooms?${searchParams.toString()}`);
-  };
+  if (!checkIn || !checkOut) {
+    alert("Please select check-in and check-out dates before searching.");
+    return;
+  }
 
-  const scrollToBookingForm = () => {
-    if (bookingFormRef.current) {
-      const windowHeight = window.innerHeight;
-      const formHeight = bookingFormRef.current.offsetHeight;
-      const offset = (windowHeight - formHeight) / 2;
-      const formPosition = bookingFormRef.current.getBoundingClientRect().top + window.pageYOffset;
-      
-      window.scrollTo({
-        top: formPosition - offset,
-        behavior: 'smooth'
-      });
-    }
-  };
+  const searchParams = new URLSearchParams({
+    checkIn: checkIn.toISOString(),
+    checkOut: checkOut.toISOString(),
+    guests: guests.toString(),
+    rooms: rooms.toString()
+  });
+
+  console.log("Navigating to:", `/rooms?${searchParams.toString()}`); // Debugging log
+  navigate(`/rooms?${searchParams.toString()}`);
+};
+
+ const scrollToBookingForm = () => {
+  if (!bookingFormRef.current) {
+    console.error("Booking form reference is missing.");
+    return;
+  }
+
+  bookingFormRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+};
+
 
   const scrollToNewsletter = () => {
     newsletterRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -133,12 +133,13 @@ export default function Home() {
           </div>
 
           <div className="mt-6">
-            <button
-              onClick={handleSearch}
-              className="w-full bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
-            >
-              Search Rooms
-            </button>
+           <button
+  onClick={handleSearch}
+  className="w-full bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
+>
+  Search Rooms
+</button>
+
           </div>
         </div>
       </motion.div>
@@ -240,15 +241,14 @@ export default function Home() {
                   </div>
                   <div className="flex justify-between items-center">
                     {/* <span className="text-3xl font-serif">{room.price}</span> */}
-                    <motion.button 
-                      onClick={scrollToBookingForm}
-                      className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition-colors"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      BOOK NOW
-                    </motion.button>
-                  </div>
+                   <button
+  onClick={scrollToBookingForm}
+  className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition-colors"
+>
+  Book Your Stay
+</button>
+
+                  </div> 
                 </div>
               </motion.div>
             ))}
