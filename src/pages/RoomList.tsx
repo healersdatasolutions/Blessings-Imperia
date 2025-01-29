@@ -1,56 +1,22 @@
-import { useEffect, useState } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
-import { supabase } from '../lib/supabase';
-import { Room } from '../types';
+import { Link } from 'react-router-dom';
 import { Wifi, Tv, Coffee, Users } from 'lucide-react';
 import ImageCarousel from '../components/ImageCarousel';
 
+const roomData = [
+  { id: 1, name: 'Deluxe Room', description: 'Spacious room with king-size bed and premium amenities.', capacity: 2, amenities: ['WiFi', 'TV', 'Mini bar'], price: 13999, images: ['/images/deluxe1.jpg', '/images/deluxe2.jpg'] },
+  { id: 2, name: 'Super Deluxe Room', description: 'Luxury room with twin beds and high-end furnishings.', capacity: 3, amenities: ['WiFi', 'TV', 'Mini bar', 'Room Service'], price: 14999, images: ['/images/superdeluxe1.jpg', '/images/superdeluxe2.jpg'] },
+];
+
 export default function RoomList() {
-  const [searchParams] = useSearchParams();
-  const [rooms, setRooms] = useState<Room[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  const checkIn = searchParams.get('checkIn');
-  const checkOut = searchParams.get('checkOut');
-  const guests = searchParams.get('guests');
-
-  useEffect(() => {
-    async function fetchRooms() {
-      try {
-        const { data, error } = await supabase
-          .from('rooms')
-          .select('*')
-          .gte('capacity', Number(guests) || 1);
-
-        if (error) throw error;
-        setRooms(data || []);
-      } catch (error) {
-        console.error('Error fetching rooms:', error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchRooms();
-  }, [guests]);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500" />
-      </div>
-    );
-  }
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 mt-10">Available Rooms</h2>
       
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {rooms.map((room) => (
+        {roomData.map((room) => (
           <Link
             key={room.id}
-            to={`/rooms/${room.id}?checkIn=${checkIn}&checkOut=${checkOut}&guests=${guests}`}
+            to={`/rooms/${room.id}`}
             className="block hover:shadow-lg transition-shadow duration-200"
           >
             <div className="bg-white rounded-lg shadow overflow-hidden">
