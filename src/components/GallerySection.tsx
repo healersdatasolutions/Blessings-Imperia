@@ -33,7 +33,7 @@ export default function GallerySection() {
   };
 
   return (
-    <section id="gallery" className="py-20">
+    <section id="gallery" className="relative z-10 py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
           className="text-4xl font-bold text-center mb-16"
