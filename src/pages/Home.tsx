@@ -84,23 +84,25 @@ export default function Home() {
             <div>
               <label className="block text-sm font-medium text-gray-700">Check-in</label>
               <DatePicker
-                selected={checkIn}
-                onChange={setCheckIn}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
-                minDate={new Date()}
-                placeholderText="Select date"
-              />
+  selected={checkIn}
+  onChange={(date: Date) => setCheckIn(date)}
+  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+  minDate={new Date()} // Ensures past dates cannot be selected
+  dateFormat="yyyy-MM-dd"
+  placeholderText="Select Check-in Date"
+/>
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700">Check-out</label>
               <DatePicker
-                selected={checkOut}
-                onChange={setCheckOut}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
-                minDate={checkIn || new Date()}
-                placeholderText="Select date"
-              />
+  selected={checkOut}
+  onChange={(date: Date) => setCheckOut(date)}
+  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+  minDate={checkIn || new Date()} // Ensures check-out is after check-in
+  dateFormat="yyyy-MM-dd"
+  placeholderText="Select Check-out Date"
+/>
             </div>
 
             <div>
