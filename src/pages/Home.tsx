@@ -72,13 +72,14 @@ export default function Home() {
       <HeroCarousel onBookNowClick={scrollToBookingForm} />
 
       {/* Booking Form */}
-      <motion.div 
-        ref={bookingFormRef}
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24"
-      >
+    <motion.div 
+  ref={bookingFormRef}
+  initial={{ y: 50, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.5 }}
+  className="relative z-50 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24"
+>
+
         <div className="bg-white rounded-lg shadow-xl p-6">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <div>
