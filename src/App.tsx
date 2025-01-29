@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer'; // Import the Footer component
 import Home from './pages/Home';
 import RoomList from './pages/RoomList';
 import RoomDetails from './pages/RoomDetails';
@@ -12,17 +13,18 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
-      
+      <div className="min-h-screen bg-gray-50 flex flex-col">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/rooms" element={<RoomList />} />
-          <Route path="/rooms/:id" element={<RoomDetails />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/auth" element={<Auth />} />
-        </Routes>
-   
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/rooms" element={<RoomList />} />
+            <Route path="/rooms/:id" element={<RoomDetails />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/auth" element={<Auth />} />
+          </Routes>
+        </div>
+        <Footer /> {/* Added Footer Component */}
         <Toaster position="top-right" />
       </div>
     </Router>
