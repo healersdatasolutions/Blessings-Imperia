@@ -382,14 +382,6 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-4">Blessings Imperia</h3>
               <p className="text-gray-400">Down-to-earth property in the city centre, offering simply furnished rooms & event space.</p>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-              <p className="text-gray-400"> 20, Lal Bahadur Shastri Marg, Civil Lines, Prayagraj, Uttar Pradesh 211001</p>
-              {/* <p className="text-gray-400">Phone: (123) 456-7890</p>
-              <p className="text-gray-400">Email: info@blessingsimperia.com</p> */}
-
-              
-            </div>
             {/* <div>
               <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
               <div className="flex space-x-4">
