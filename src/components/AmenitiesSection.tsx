@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Wifi, Coffee, Car, ShieldCheck, CreditCard, Phone, Utensils, Briefcase, MapPin, ConciergeBell, Building2, Dumbbell, SwimmingPool, Spa, Restaurant, ShoppingBag, ParkingCircle, Train, Bus, FirstAidKit, Users, Hotel } from 'lucide-react';
+import { Wifi, Coffee, Car, ShieldCheck, CreditCard, Phone, Utensils, Briefcase, MapPin, ConciergeBell, Building2, Dumbbell, Bath, Spa, Restaurant, ShoppingBag, ParkingCircle, Train, Bus, FirstAidKit, Users, Hotel } from 'lucide-react';
 
 const inHouseFacilities = [
   { icon: Wifi, name: 'Free Wi-Fi in all rooms & lobby' },
@@ -10,7 +10,7 @@ const inHouseFacilities = [
   { icon: Utensils, name: 'Multi-Cuisine Restaurant' },
   { icon: Briefcase, name: 'Conference & Banquet Halls' },
   { icon: Dumbbell, name: 'Fully Equipped Gym' },
-  { icon: SwimmingPool, name: 'Outdoor Swimming Pool' },
+  { icon: Bath, name: 'Outdoor Swimming Pool' },
   { icon: Spa, name: 'Spa & Wellness Center' },
   { icon: Hotel, name: 'Luxury Suites & Executive Rooms' }
 ];
