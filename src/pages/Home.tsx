@@ -376,10 +376,10 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6">
           <img src="/images/MD.jpeg" alt="Mr. Abhishek Jain" className="mx-auto rounded-lg shadow-lg mb-6 w-48 h-48 object-cover" />
           <h2 className="text-3xl font-bold mb-4">Meet Our MD</h2>
-          <p className="text-lg text-gray-700">Mr. Abhishek Jain CA, graduate from Allahabad University feels that Hospitality is the cordial and generous reception and entertainment of guests, either social or commercial which starts from home. The hospitality industry is comprised of those business which practice the act of being hospitable; those businesses which are characterized by generosity and friendliness to guests.</p>
-          <p className="mt-4 text-lg text-gray-700">He believes that hospitality starts from home and leads to hotels as it creates a home-like atmosphere. In his opinion, no one can understand better than a woman about the hospitality industry and culture. He decided to open a hospitality management chain of hotels with young, high-dreamed professionals from IHM and fresh graduates.</p>
-          <p className="mt-4 text-lg text-gray-700">His vision is to bring young professionals into the industry, promote youth employment, and redefine hospitality standards.</p>
-        </div>
+          <p className="text-lg text-gray-700">Mr. Abhishek Jain, CA, a distinguished graduate from Allahabad University, believes that hospitality is the art of extending warmth, generosity, and exceptional service to guests—whether in a social or commercial setting. He envisions the hospitality industry as a reflection of these values, fostering an atmosphere where guests feel at home, even when away.</p>
+          <p className="mt-4 text-lg text-gray-700">Driven by this philosophy, Mr. Jain firmly believes that hospitality begins at home and seamlessly extends to hotels. Recognizing that no one understands the essence of hospitality better than women, he set out to establish a hospitality management chain that brings together ambitious young professionals from IHM and fresh graduates eager to redefine the industry.</p>
+          <p className="mt-4 text-lg text-gray-700">His modern approach and service-driven mindset emphasize the importance of creating memorable experiences for guests. He believes that warm greetings and personalized service not only enhance comfort but also build lasting relationships with customers.</p>
+         </div>
       </section>
       {/* Newsletter Section */}
       <div ref={newsletterRef}>
