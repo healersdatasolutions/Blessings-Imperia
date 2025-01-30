@@ -4,8 +4,8 @@ import ImageCarousel from '../components/ImageCarousel';
 import toast from 'react-hot-toast';
 
 const roomData = {
-  1: { name: 'Deluxe Room', description: 'Spacious room with king-size bed and premium amenities.', capacity: 2, amenities: ['WiFi', 'TV', 'Mini bar'], price: 13999, images: ['/images/deluxe1.jpg', '/images/deluxe2.jpg'] },
-  2: { name: 'Super Deluxe Room', description: 'Luxury room with twin beds and high-end furnishings.', capacity: 3, amenities: ['WiFi', 'TV', 'Mini bar', 'Room Service'], price: 14999, images: ['/images/superdeluxe1.jpg', '/images/superdeluxe2.jpg'] },
+  1: { name: 'Deluxe Room', description: 'Spacious room with king-size bed and premium amenities.', capacity: 2, amenities: ['WiFi', 'TV', 'Mini bar'], price: 13999, images: ['/images/Deluxe1.jpg', '/images/Deluxe2.jpg', '/images/Deluxe3.jpg'] },
+  2: { name: 'Super Deluxe Room', description: 'Luxury room with twin beds and high-end furnishings.', capacity: 3, amenities: ['WiFi', 'TV', 'Mini bar', 'Room Service'], price: 14999, images: ['/images/Superdeluxe1.jpg', '/images/Superdeluxe2.jpg', '/images/Superdeluxe3.jpg', '/images/Superdeluxe4.jpg'] },
 };
 
 export default function RoomDetails() {
