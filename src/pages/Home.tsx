@@ -168,8 +168,8 @@ export default function Home() {
               viewport={{ once: true }}
               className="bg-black text-white p-12 rounded-lg"
             >
-              <h2 className="text-4xl font-bold mb-6">Redefines luxury with world-class accommodations</h2>
-              <p className="mb-8">Spread across two elegant complexes, each thoughtfully designed to cater to your every need</p>
+              <h2 className="text-4xl font-bold mb-6">Redefine Luxury with World Class Accommodations</h2>
+              <p className="mb-8">Spread Across Two Elegant Complexes, Each Thoughtfully Designed To Cater To Your Every Need</p>
               <div className="grid grid-cols-2 gap-4">
                 {["Exquisite Experiences", "Sustainable Luxury", "Unmatched Service", "Culinary Excellence", "Timeless Elegance", "Exclusive Privacy"].map((item, index) => (
                   <motion.div 
