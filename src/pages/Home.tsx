@@ -379,7 +379,6 @@ export default function Home() {
           <p className="mt-4 text-lg text-gray-700">His vision is to bring young professionals into the industry and create opportunities for youth employment while redefining the standards of the hospitality sector.</p>
         </div>
       </section>
-    </section>
       {/* Newsletter Section */}
       <div ref={newsletterRef}>
         <Newsletter />
