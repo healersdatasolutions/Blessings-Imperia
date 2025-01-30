@@ -374,7 +374,7 @@ export default function Home() {
         {/* MD Section */}
       <section className="py-20 bg-white text-center">
         <div className="max-w-5xl mx-auto px-6">
-          <img src="/images/md.jpg" alt="Mr. Abhishek Jain" className="mx-auto rounded-lg shadow-lg mb-6 w-48 h-48 object-cover" />
+          <img src="/images/md.jpeg" alt="Mr. Abhishek Jain" className="mx-auto rounded-lg shadow-lg mb-6 w-48 h-48 object-cover" />
           <h2 className="text-3xl font-bold mb-4">Meet Our MD</h2>
           <p className="text-lg text-gray-700">Mr. Abhishek Jain CA, graduate from …….. University feels that Hospitality is the cordial and generous reception and entertainment of guests, either social or commercial which starts from home. The hospitality industry is comprised of those business which practice the act of being hospitable; those businesses which are characterized by generosity and friendliness to guests.</p>
           <p className="mt-4 text-lg text-gray-700">He believes that hospitality starts from home and leads to hotels as it creates a home-like atmosphere. In his opinion, no one can understand better than a woman about the hospitality industry and culture. He decided to open a hospitality management chain of hotels with young, high-dreamed professionals from IHM and fresh graduates.</p>
