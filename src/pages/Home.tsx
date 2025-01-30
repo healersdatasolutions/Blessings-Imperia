@@ -371,6 +371,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Separator */}
+      <div className="border-t-4 border-gray-300 my-12"></div>
         {/* MD Section */}
       <section className="py-20 bg-white text-center">
         <div className="max-w-5xl mx-auto px-6">
