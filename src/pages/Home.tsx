@@ -204,22 +204,22 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                image: "https://images.unsplash.com/photo-1736963204700-19acad57c0b6?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                title: "Family Suite",
+                image: "/images/Superdeluxe3.jpeg",
+                title: "Executive",
                 description: "Spacious family-friendly suite with two bedrooms and a living area, perfect for a family vacation.",
-                price: "$300"
+                price: "Rs.13999"
               },
               {
                 image: "https://images.unsplash.com/photo-1736963204265-53fb7776eaa0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                title: "Deluxe King Room",
+                title: "Super Deluxe Room",
                 description: "Elegant room with a king-sized bed and city views, ideal for business travelers or couples on a romantic getaway.",
-                price: "$220"
+                price: "Rs.14999"
               },
               {
                 image: "https://images.unsplash.com/photo-1736963204243-2d2e94657064?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                title: "Executive Suite",
+                title: "Deluxe Room",
                 description: "Premium suite designed for business professionals, offering a blend of luxury and functionality ",
-                price: "$400"
+                price: "Rs.12999"
               }
             ].map((room, index) => (
               <motion.div 
