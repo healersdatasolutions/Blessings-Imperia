@@ -371,7 +371,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+        {/* MD Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto text-center px-6">
+          <h2 className="text-3xl font-bold mb-6">Meet Our MD</h2>
+          <p className="text-lg text-gray-700">Mr. Abhishek Jain, CA, graduate from Allahabad University, believes that hospitality is the art of making guests feel at home. With a passion for the industry, he aims to build a hospitality chain that embraces professionalism and warmth.</p>
+          <p className="mt-4 text-lg text-gray-700">His vision is to bring young professionals into the industry and create opportunities for youth employment while redefining the standards of the hospitality sector.</p>
+        </div>
+      </section>
+    </section>
       {/* Newsletter Section */}
       <div ref={newsletterRef}>
         <Newsletter />
