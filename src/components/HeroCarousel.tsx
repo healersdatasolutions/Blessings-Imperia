@@ -3,8 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const heroImages = [
-  "/images/hero1.jpg",
-  "/images/hero2.jpg",
   "/images/hero3.jpg"
 ];
 
