@@ -372,11 +372,13 @@ export default function Home() {
         </div>
       </section>
         {/* MD Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto text-center px-6">
-          <h2 className="text-3xl font-bold mb-6">Meet Our MD</h2>
-          <p className="text-lg text-gray-700">Mr. Abhishek Jain, CA, graduate from Allahabad University, believes that hospitality is the art of making guests feel at home. With a passion for the industry, he aims to build a hospitality chain that embraces professionalism and warmth.</p>
-          <p className="mt-4 text-lg text-gray-700">His vision is to bring young professionals into the industry and create opportunities for youth employment while redefining the standards of the hospitality sector.</p>
+      <section className="py-20 bg-white text-center">
+        <div className="max-w-5xl mx-auto px-6">
+          <img src="/images/md.jpg" alt="Mr. Abhishek Jain" className="mx-auto rounded-lg shadow-lg mb-6 w-48 h-48 object-cover" />
+          <h2 className="text-3xl font-bold mb-4">Meet Our MD</h2>
+          <p className="text-lg text-gray-700">Mr. Abhishek Jain CA, graduate from …….. University feels that Hospitality is the cordial and generous reception and entertainment of guests, either social or commercial which starts from home. The hospitality industry is comprised of those business which practice the act of being hospitable; those businesses which are characterized by generosity and friendliness to guests.</p>
+          <p className="mt-4 text-lg text-gray-700">He believes that hospitality starts from home and leads to hotels as it creates a home-like atmosphere. In his opinion, no one can understand better than a woman about the hospitality industry and culture. He decided to open a hospitality management chain of hotels with young, high-dreamed professionals from IHM and fresh graduates.</p>
+          <p className="mt-4 text-lg text-gray-700">His vision is to bring young professionals into the industry, promote youth employment, and redefine hospitality standards.</p>
         </div>
       </section>
       {/* Newsletter Section */}
