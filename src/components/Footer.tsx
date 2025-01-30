@@ -6,7 +6,7 @@ export default function Footer() {
           <h2 className="text-lg font-semibold">Contact Us</h2>
           <p className="mt-2">20, L.B. Shastri Marg, Civil Lines, Prayagraj-211001</p>
           <p className="mt-1">Email: imperiablessings@gmail.com</p>
-          <p className="mt-1">Phone: +91 9151732969</p>
+          <p className="mt-1">Phone: +91 9415164170 (reservation) ,+91 9151732969</p>
         </div>
         <div>
           <h2 className="text-lg font-semibold">Quick Links</h2>
