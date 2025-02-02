@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
-import { auth } from 'src/firebaseConfig.js; // Adjust the path according to your project structure
+import { auth } from 'src/firebaseConfig.js'; // Adjust the path according to your project structure
 
 const PhoneAuth = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
