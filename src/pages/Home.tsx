@@ -244,12 +244,14 @@ export default function Home() {
                   </div>
                   <div className="flex justify-between items-center">
                     {/* <span className="text-3xl font-serif">{room.price}</span> */}
-                   <button
-  onClick={scrollToBookingForm}
-  className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition-colors"
+              <a
+  href="https://www.makemytrip.com/hotels/blessings_imperia-details-prayagraj.html"
+  target="_blank"
+  className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition-colors inline-block text-center"
 >
   Book Your Stay
-</button>
+</a>
+
 
                   </div> 
                 </div>
