@@ -47,13 +47,15 @@ export default function HeroCarousel() {
           Welcome to Imperia Blessings
         </motion.h1>
         <motion.p 
-          className="text-xl mb-8"
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          Experience unparalleled comfort and luxury in the heart of Prayagraj.
-        </motion.p>
+  className="text-xl mb-8"
+  initial={{ y: 20, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 1 }}
+  style={{ color: 'white' }}  // Ensuring text is white regardless of other CSS
+>
+  Experience unparalleled comfort and luxury in the heart of Prayagraj.
+</motion.p>
+
       <motion.a
   href="https://www.makemytrip.com/hotels/blessings_imperia-details-prayagraj.html"
   target="_blank"
