@@ -54,14 +54,17 @@ export default function HeroCarousel() {
         >
           Experience unparalleled comfort and luxury in the heart of Prayagraj.
         </motion.p>
-        <motion.button
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1.2 }}
-          className="bg-white text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors"
-        >
-          Book Your Stay
-        </motion.button>
+      <motion.a
+  href="https://www.makemytrip.com/hotels/blessings_imperia-details-prayagraj.html"
+  target="_blank"
+  initial={{ y: 20, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 1.2 }}
+  className="bg-white text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors"
+>
+  Book Your Stay
+</motion.a>
+
       </div>
       <button
         onClick={prevSlide}
