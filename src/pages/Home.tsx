@@ -134,12 +134,14 @@ export default function Home() {
           </div>
 
           <div className="mt-6">
-           <button
-  onClick={handleSearch}
-  className="w-full bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
+         <a
+  href="https://www.makemytrip.com/hotels/blessings_imperia-details-prayagraj.html"
+  target="_blank"
+  className="w-full bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors inline-block text-center"
 >
-  Search Rooms
-</button>
+  Check Availability
+</a>
+
 
           </div>
         </div>
